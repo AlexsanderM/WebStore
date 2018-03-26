@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebStore.Models.EmployeeView>
+﻿@model WebStore.Models.EmployeeView
 
 
 <!DOCTYPE html>
@@ -12,16 +12,12 @@
     <p>Details</p>
 
     <table>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.FirstName</td>
-                <td>@item.SurName</td>
-                <td>@item.Patronymic</td>
-                <td>@Html.ActionLink("Детали", "Details", new { id = item.Id })</td>
-            </tr>
-        }
+       <tr>
+           <td>@Model.FirstName</td>     
+           <td>@Html.ActionLink("Назад", "Index")</td>
+           
+       </tr>
+       
     </table>
 
 </body>
