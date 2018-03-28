@@ -1,24 +1,16 @@
 ﻿@model WebStore.Models.EmployeeView
+@{ 
+    Layout = "_Layout";
+    ViewBag.Title = "Details";
+}
 
+<p>Details</p>
+<table>
+    <tr>
+        <td>@Model.FirstName</td>
+        <td>@Model.SurName</td>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <p>Details</p>
-
-    <table>
-       <tr>
-           <td>@Model.FirstName</td>     
-           <td>@Html.ActionLink("Назад", "Index")</td>
-           
-       </tr>
-       
-    </table>
-
-</body>
-</html>
+        <td>@Html.ActionLink("Назад", "Index")</td>
+        <td><a ></td>
+    </tr>       
+</table>
