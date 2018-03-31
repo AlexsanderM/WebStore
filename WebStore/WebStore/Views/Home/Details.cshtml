@@ -9,7 +9,9 @@
         <td>@Model.FirstName</td>
         <td>@Model.SurName</td>
 
-        <td>@Html.ActionLink("Назад", "Index")</td>
-        <td><a></td>
+        <td>@Html.ActionLink("Назад html ActionLink", "Index")</td>
+        <td>
+            <a asp-action="index">Назад tag helper</a>
+        </td>
     </tr>
 </table>
