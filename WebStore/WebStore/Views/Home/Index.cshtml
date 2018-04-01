@@ -3,21 +3,11 @@
     ViewBag.Title = "Index";
 }
 
-<p>Test</p>
+@section topsection {
+    @await Html.PartialAsync("Partial/_Slider")
+}
 
-<table>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.FirstName</td>
-            <td>@item.SurName</td>
-            <td>@item.Patronymic</td>
-            <td>@Html.ActionLink("Детали Html Action", "Details", new { id = item.Id })</td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Детали tag helper</a>
-            </td>
-        </tr>
-    }
-</table>
 
+@await Html.PartialAsync("Partial/_FeaturesItem")
+@await Html.PartialAsync("Partial/_CategoryTab")
+@await Html.PartialAsync("Partial/_RecommendedItem")
