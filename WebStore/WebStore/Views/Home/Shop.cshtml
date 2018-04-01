@@ -3,7 +3,6 @@
     ViewData["Title"] = "Shop";
 }
 
-
 @section topsection {
     <section id="advertisement">
         <div class="container">
@@ -12,4 +11,19 @@
     </section>
 }
 
-@await Html.PartialAsync("Partial/_FeaturesItem")
+<section>
+    <div class="row">
+        <div class="col-sm-3">
+            @await Html.PartialAsync("Partial/_LeftSideBar")
+        </div>
+        <div class="col-sm-9 padding-right">
+            @await Html.PartialAsync("Partial/_FeaturesItem")
+            <ul class="pagination">
+                <li class="active"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+</section>

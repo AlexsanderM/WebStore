@@ -22,5 +22,13 @@ namespace WebStore.Controllers
         {
             return View();
         }
+
+        public IActionResult Checkout() {
+            return View();
+        }
+
+        public IActionResult CardItem() {
+            return View();
+        }
     }
 }
